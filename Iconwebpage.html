@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <style>
+            .icon2 {
+                width: 450px;
+                height: 450px;
+                object-fit: cover;
+                object-position: 75% 20%;
+                border-radius: 50px;
+                transition:
+                    box-shadow 0.15s,
+                    opacity 0.15s;
+                margin-bottom: 40px;
+            }
+            img {
+                margin-right: 30px;
+            }
+            .icon2:hover {
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+                opacity: 0.85;
+            }
+            body {
+                background-color: rgb(0, 0, 0);
+            }
+        </style>
+        <script>
+            function playAudio(selectedAudio) {
+                document.querySelectorAll("audio").forEach((audio) => {
+                    if (audio !== selectedAudio) {
+                        audio.pause();
+                        audio.currentTime = 0;
+                    }
+                });
+                if (selectedAudio.paused) {
+                    selectedAudio.play();
+                } else {
+                    selectedAudio.pause();
+                    selectedAudio.currentTime = 0;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon1sound'))"
+            src="Icon 1.jpg"
+            alt=""
+        />
+        <audio
+            id="icon1sound"
+            src="Cytus II Ivy Character theme extended.mp3"
+        ></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon2sound'))"
+            src="Icon 3.jpg"
+            alt=""
+        />
+        <audio
+            id="icon2sound"
+            src="Cytus II x Arcaea Tairitsu Theme EXENDED.mp3"
+        ></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon3sound'))"
+            src="Icon 4.jpg"
+            alt=""
+        />
+        <audio id="icon3sound" src="[Cytus II] JOE Theme 音源.mp3"></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon4sound'))"
+            src="Icon 5.jpg"
+            alt=""
+        />
+        <audio id="icon4sound" src="[Cytus II] Nora's theme song.mp3"></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon5sound'))"
+            src="Icon 2 new.jpg"
+            alt=""
+        />
+        <audio id="icon5sound" src="[Cytus II] Aroma's theme song.mp3"></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon6sound'))"
+            src="Icon 6.jpg"
+            alt=""
+        />
+        <audio
+            id="icon6sound"
+            src="[Cytus II  Kizuna AI] Kizuna AI Theme音源 高音質.mp3"
+        ></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon7sound'))"
+            src="Icon 7.jpg"
+            alt=""
+        />
+        <audio
+            id="icon7sound"
+            src="[Cytus II] Xenon's theme song Loop 10mins.mp3"
+        ></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon8sound'))"
+            src="icon 8.jpg"
+            alt=""
+        />
+        <audio id="icon8sound" src="Cytus II  ConneR theme (1).mp3"></audio>
+
+        <img
+            class="icon2"
+            onclick="playAudio(document.getElementById('icon9sound'))"
+            src="Icon 9.jpg"
+            alt=""
+        />
+        <audio
+            id="icon9sound"
+            src="[Cytus II  Deemo] Alice Theme音源 高音質.mp3"
+        ></audio>
+    </body>
+</html>
